@@ -1,0 +1,85 @@
+
+<div class=header>
+    <img class="img" src="../assets/images/logo.png"> 
+    <h1> Employee Training Management Portal</h1>
+</div>
+
+<app-sidebar></app-sidebar>
+
+
+<div class="container-fluid eform">
+    <form class="form1"  id="employeeform" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label class="name">Employee Id*</label>
+            <input type="text" class="form-control" name="id" placeholder="Enter Id here" required [(ngModel)]="employee.id">
+        </div>
+        <div class="form-group">
+            <label class="name" >First Name*</label>
+            <input type="text" class="form-control" name="firstName" placeholder="Enter First Name" required [(ngModel)]="employee.firstName">
+        </div>
+        <div class="form-group">
+            <label class="name" >Middle Name*</label>
+            <input type="text" class="form-control" name="middleName" placeholder="Enter Middle Name"required [(ngModel)]="employee.middleName">
+        </div>
+        <div class="form-group">
+            <label class="name" >Last Name*</label>
+            <input type="text" class="form-control" name="lastName" placeholder="Enter Last Name" required [(ngModel)]="employee.lastName">
+        </div>
+        <div class="form-group">
+            <label class="name" >Email*</label>
+            <input type="text" class="form-control" name="email" placeholder="example@example.com" required [(ngModel)]="employee.email">
+        </div>
+        <div class="form-group">
+            <label class="name" >DOB*</label>
+            <input type="text" class="form-control" name="dob" placeholder="YYYY-MM-DD" required [(ngModel)]="employee.dob">
+        </div>
+        <div class="form-group">
+            <label class="name" >City*</label>
+            <input type="text" class="form-control" name="city" placeholder="Enter City" required [(ngModel)]="employee.city" >
+        </div>
+        <div class="form-group">
+            <label class="name" >Contact No*</label>
+            <input type="text" class="form-control" name="contactNumber" placeholder="Enter 10 digit Phone number" required [(ngModel)]="employee.contactNumber">
+        </div>
+        <nav class="navbar">
+          <button type="submit" class="btn btn-primary navbutton"  (click)="onClick($event)">Save</button>
+          <button type="button" class="btn btn-primary navbutton" (click) = "onClick1($event)">Cancel</button>
+      </nav>
+    </form>
+    
+</div>
+
+
+
+<div class="modal" id="myModal" [style.display]="showModal ? 'block' : 'none'">
+    <div class="modal-dialog">
+      <div class="modal-content"> 
+        <!-- Modal body -->
+        <div class="modal-body">
+            Employee has been added successfully
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click) = "hide() ; clearForm()">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="modal" id="myModal" [style.display]="showModal1 ? 'block' : 'none'">
+    <div class="modal-dialog">
+      <div class="modal-content"> 
+        <!-- Modal body -->
+        <div class="modal-body">
+            There has been some issue in adding the employee<br>
+                           or <br>
+                  Employee already exists<br>
+        </div>
+        
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal" (click) = "hide1() ; btnClick()">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,29 @@
+<div class="grid-container">
+    <div class="grid-item">Emp id</div>
+    <div class="grid-item">Name</div>
+    <div class="grid-item">DOB</div>  
+    <div class="grid-item">Email Id</div>
+    <div class="grid-item">City</div>
+    <div class="grid-item">Contact No</div>
+  </div>
+  <div class="grid-container">
+    <div class="grid-item-darkgrey">192828</div>
+    <div class="grid-item-darkgrey">Shaun Michael</div>
+    <div class="grid-item-darkgrey">20/12/1970</div>  
+    <div class="grid-item-darkgrey">shaun.michael@infosys.com</div>
+    <div class="grid-item-darkgrey">Pune</div>
+    <div class="grid-item-darkgrey">987621235</div>
+  </div>
+ 
+  <div class="grid-container" *ngFor = "let employee of employees | async">
+    <div class="grid-item-lightgrey"> {{employee.id}}</div>
+    <div class="grid-item-lightgrey">{{employee.firstName}} {{employee.middleName}} {{employee.lastName}}</div>
+    <div class="grid-item-lightgrey">{{employee.dob}}</div>  
+    <div class="grid-item-lightgrey">{{employee.email}}</div>
+    <div class="grid-item-lightgrey">{{employee.city}}</div>
+    <div class="grid-item-lightgrey">{{employee.contactNumber}}</div>
+  </div>
+  
+
+  
+<app-navbar></app-navbar>

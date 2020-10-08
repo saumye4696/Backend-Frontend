@@ -1,0 +1,2 @@
+insert into employee values(101,'Malibu','12342634','1985-05-04','tony@gmail.com','Tony','Stark','Ironman');
+insert into employee values(102,'California','13253628','1915-03-14','steve@gmail.com','Steve','Rogers','CaptainAmerica');
